@@ -1,11 +1,11 @@
 package vlad187.strings
 
 /**
-  * Created by Vlad187 on 2/25/2014.
+  * Created by Vlad187 on 2/28/2014.
   */
 object CommonUtils {
-  implicit class Quotes(a: String) {
-    def doublequoted: String = '"'+a+'"'
+  implicit class Quotes[T](a: T) {
+    def doublequoted: String = '"'+a.toString+'"'
     def singlequoted: String = s"'$a'"
     def quoted: String = doublequoted
   }
